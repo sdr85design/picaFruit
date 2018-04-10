@@ -1,0 +1,66 @@
+<!-- Welcome To Pica Fruit This is a prototype Website for a Client
+     Designer: SDR85DESIGN
+     Project Type: Portfolio Work - Using Javascript30 Vanilla JS - Flex Penal by Wes Bos
+    -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pic Fruit | Canada</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>.</p>
+      <p>Welcome</p>
+      <p>.</p>
+    </div>
+    <div class="panel panel2">
+      <P>.</p>
+      <p>To</p>
+      <p>.</p>
+    </div>
+    <div class="panel panel3">
+      <p>.</p>
+      <p>PICA</p>
+      <p>.</p>
+    </div>
+    <div class="panel panel4">
+      <p>.</p>
+      <p>FRUIT</p>
+      <p>.</p>
+    </div>
+    <!-- <div class="panel panel5">
+
+      <p>Kitchener-Waterloo</p>
+
+    </div> -->
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      console.log('Hello');
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>
+
+</body>
+<footer><center>&copy Pica Fruit 2018</center></footer>
+</html>
